@@ -1,0 +1,276 @@
+#stage{
+	width: 900px;
+	height: 690px;
+	/* 画布居中 */
+	margin: auto;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+	/* stage  bg1设置绝对与相对位置可以使背景进行移动 */
+	position: relative;
+}
+/* 设置两个背景用于移动，给玩家造成向右移动的感觉 */
+.bg1{
+	background-image: url(../img/background2.png);
+	background-position:center;
+	width: 56.25rem;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	
+}
+.bg2{
+	background-image: url(../img/background2.png);
+	background-position:center;
+	width: 56.25rem;
+	height: 100%;
+	position: absolute;
+	left: 900px;
+	
+}
+.functionBoard{
+	display: none;
+}
+.currentScore{
+	width: 150px;
+	height: 25px;
+	position: absolute;
+	font-size:3vmin;
+	color: black;
+	left: 390px;
+	top: 14px;
+}
+.healthLable{
+	width: 50px;
+	height: 25px;
+	position: absolute;
+	font-size:3vmin;
+	color: black;
+	left: 510px;
+	top: 14px;
+}
+.health {
+            width: 300px;
+            height: 25px;
+            border: 1px rgb(141, 236, 177) solid;
+            background-color: aliceblue;
+            box-shadow: 0px 2px 2px rgb(123, 121, 122);
+            border-radius: 10px;
+            position: absolute;
+            top: 2vmin;
+            right: 5vmin;
+            z-index: 999;
+            font-size: 1vmin;
+        }
+
+#percent {
+            background-color: rgb(119, 252, 137);
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+.needle{
+	width: 225px;
+	height: 150px;
+	background-image: url(../img/needle.png);
+	/* background-image: url(../img/alcohol.png); */
+	background-size: 100% 100%;
+	position: absolute;
+	top:280px;
+	left: -225px;
+	/* 图层靠上 */
+	z-index: 10;
+}
+.virus{
+	width: 160px;
+	background-size: 100% 100%;
+	position: absolute;
+	left:900px;
+}
+.virus1{
+	height: 121px;
+	background-image: url(../img/virus1.png);
+	
+}
+.virus2{
+	height: 151px;
+	background-image: url(../img/virus2.png);
+}
+.virus3{
+	height: 146px;
+	background-image: url(../img/virus3.png);
+}
+.water{
+	width: 85px;
+	height: 85px;
+	background-image: url(../img/water.png);
+	background-size: 100% 100%;
+	position: absolute;
+}
+.helpUI{
+	position: absolute;
+	width: 900px;
+	height: 690px;
+	text-align: center;
+	background-image: url(../img/helpUI.png);
+	background-size: 100% 100%;
+	z-index: 20;
+	display: none;
+}
+.helpUI #directStart{
+	width: 210px;
+	height: 100px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/startb.png);
+	background-size: 100% 100%;
+	top: 520px;
+}
+.helpUI #home{
+	width: 210px;
+	height: 100px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/homeb.png);
+	background-size: 100% 100%;
+	top: 520px;
+}
+.helpUI #nextpage{
+	width: 210px;
+	height: 100px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/nextpageb.png);
+	background-size: 100% 100%;
+	top: 520px;
+}
+.startGame{
+	position: absolute;
+	width: 900px;
+	height: 690px;
+	text-align: center;
+	background-image: url(../img/startUI.png);
+	background-size: 100% 100%;
+	/* left: calc(50% - 250px);
+	top:calc(50% - 150px); */
+	z-index: 20;
+}
+.startGame #startBtn{
+	width: 210px;
+	height: 100px;
+	position: relative;
+	/* border-radius: 64px; */
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/startb.png);
+	background-size: 100% 100%;
+	top: 500px;
+}
+
+.startGame #helpBtn{
+	width: 210px;
+	height: 100px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/helpb.png);
+	background-size: 100% 100%;
+	top: 500px;
+}
+.gameScore{
+	position: absolute;
+	width: 675px;
+	height: 405px;
+	text-align: center;
+	left: calc(50% - 328px);
+	top:calc(50% - 202px);
+	z-index: 20;
+	background-color: #00000060;
+	display: none;
+}
+.gameScore .overfant{
+	width: 400px;
+	height: 150px;
+	position: relative;
+	left: 137px;
+	background-image: url(../img/overfant.png);
+	background-size: 100% 100%;
+}
+.gameScore .playerHealth{
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 38px;
+	top: 0px;
+	background-image: url(../img/health.png);
+	background-size: 100% 100%;
+}
+.gameScore .defeated{
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 188px;
+	top: -50px;
+	background-image: url(../img/defeated.png);
+	background-size: 100% 100%;
+}
+.gameScore .omissive{
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 338px;
+	top: -100px;
+	background-image: url(../img/omssive.png);
+	background-size: 100% 100%;
+}
+.gameScore .finallyScore{
+	width: 150px;
+	height: 50px;
+	position: relative;
+	left: 488px;
+	top: -150px;
+	background-image: url(../img/finallyscore.png);
+	background-size: 100% 100%;
+}
+.gameScore #replayBtn{
+	width: 173px;
+	height: 86px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/replayb.png);
+	background-size: 100% 100%;
+	top: -70px;
+}
+.gameScore #next{
+	width: 173px;
+	height: 86px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/next.png);
+	background-size: 100% 100%;
+	top: -70px;
+}
+.gameScore #returnHome{
+	width: 173px;
+	height: 86px;
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	border-color: #00000000;
+	background-image: url(../img/homeb.png);
+	background-size: 100% 100%;
+	top: -70px;
+}
+.gameScore table{
+	width: 600px;
+	position: relative;
+	text-align: center;
+	top: -130px;
+	left: 38px;
+	/* border: solid;
+	border-color: azure; */
+}
